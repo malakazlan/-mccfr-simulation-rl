@@ -24,6 +24,22 @@ class ActionType(Enum):
 
 Action = ActionType
 
+# Human-readable action labels for output
+ACTION_NAMES: dict[ActionType, str] = {
+    ActionType.CHECK: "check",
+    ActionType.BET_25: "bet_25",
+    ActionType.BET_100: "bet_100",
+    ActionType.FOLD: "fold",
+    ActionType.CALL: "call",
+    ActionType.RAISE_50: "raise_50",
+    ActionType.RAISE_100: "raise_100",
+}
+
+
+def action_to_str(action: Action) -> str:
+    """Return a short string label for an action."""
+    return ACTION_NAMES.get(action, action.name.lower())
+
 
 @dataclass(frozen=True)
 class GameState:
@@ -320,10 +336,12 @@ def terminal_payoff(
 
 
 __all__ = [
+    "ACTION_NAMES",
     "Player",
     "ActionType",
     "Action",
     "GameState",
+    "action_to_str",
     "initial_state",
     "legal_actions",
     "apply_action",

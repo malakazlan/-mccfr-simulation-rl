@@ -1,0 +1,4 @@
+# IP range sample (no board cards)
+AcQdJcTh 1.0
+9h8d7c6s 1.0
+5h5d3c3s 1.0

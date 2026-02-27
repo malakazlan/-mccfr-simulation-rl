@@ -1,0 +1,5 @@
+# OOP range sample (4 cards per line, optional weight). No board cards.
+# Board example: AsKh7d4c2h — so avoid A,K,7,4,2 of those suits.
+AdKdQcJh 1.0
+Th9s8h7h 1.0
+Ts9s6d5c 1.0
